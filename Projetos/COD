@@ -1,42 +1,50 @@
 <!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
+<html>  
+    <head></head>
+
+    <body>
     <div>
-        <h2>Insira seu Usuario:</h2>
-        <input type="text" id="userInput">
+    <h2>insira o código do produto:</h2>
+    <input type="text" id="produtoInput">
+    <button onclick="exibirDados()">Pesquisar</button>
+    </br>
+    </br>
 
-        <h2>Insira sua senha:</h2>
-        <input type="password" id="senhaInput">
+<h2> Dados do Produto</h2>
+    <div id="dadosProduto"></div>
+</div>
+<script>
+      var produtos = [
+        {codigo: 1, descricao: 'Produto A', quantidade: 10 },
+        {codigo: 2, descricao: 'Produto B', quantidade: 5 },
+        {codigo: 3, descricao: 'Produto C', quantidade: 8 },
+      ];
 
-        <button onclick="validarLogin()">Login</button>
-    </div>
+    function exibirDados() {
+   var codigo = document.getElementById("produtoInput").
+   value;
 
-    <script>
-        function validarLogin() { 
-            let usuarioFixo = "Alex"
-            let senhaFixa = "123"
+   dadosProduto.innerHTML = "EAN: " + (produtos[codigo - 1].codigo)
+   + " - " +
+   "Descrição: " + (produtos[codigo - 1].descricao) +
+   + " - " +
+   "QTD: " + (produtos[codigo - 1].quantidade);
+};
 
-            let usuario = document.getElementById("userInput").value;
-            let senha = document.getElementById("senhaInput").value;
 
-            if ((usuario == usuarioFixo) && (senha == senhaFixa)) {
-                window.location.href = "file:///C:/Users/Usuario/Desktop/DSV-GIT/Primeira%20vez/Maravilha/Consulta.html";
-            } else {
-                window.alert("Logou não");
-            }
-        };
 
-    </script>
-</body>
 
+
+
+
+</script>
+
+
+
+
+
+
+
+
+    </body>
 </html>
-
-
-
-            
-            
-
-            
-        
