@@ -1,47 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Login</title>
 </head>
 <body>
-    <div>
-        <h2>Insira seu Usuario:</h2>
-        <input type="text" id="userInput">
 
-        <h2>Insira sua senha:</h2>
-        <input type="password" id="senhaInput">
-
-        <button onclick="validarLogin()">Login</button>
-    </div>
+    <label for="userInput">Usuário:</label>
+    <input type="text" id="userInput" name="userInput" required>
+    
+    <br>
+    
+    <label for="senhaInput">Senha:</label>
+    <input type="password" id="senhaInput" name="senhaInput" required>
+    
+    <br>
+    
+    <button onclick="validarLogin()">Login</button>
 
     <script>
-        function validarLogin() { 
-            let usuarioFixo = "Alex"
-            let senhaFixa = "123"
+        function validarLogin() {
+            let usuarioFixo = "Alex";
+            let senhaFixa = "123";
 
-            let usuarioFixo2 = "Pedro"
-            let senhaFixa2 = "456"
+            let usuarioFixo2 = "Pedro";
+            let senhaFixa2 = "456";
 
-            let usuarioFixo3 = "Anônimo" 
-            let senhaFixa3 = "789"
+            let usuarioFixo3 = "Anônimo";
+            let senhaFixa3 = "789";
 
             let usuario = document.getElementById("userInput").value;
             let senha = document.getElementById("senhaInput").value;
 
-            if ((usuario == usuarioFixo ,2,3) && (senha == senhaFixa ,2,3)) {
+            if (
+                (usuario === usuarioFixo && senha === senhaFixa) ||
+                (usuario === usuarioFixo2 && senha === senhaFixa2) ||
+                (usuario === usuarioFixo3 && senha === senhaFixa3)
+            ) {
                 window.location.href = "file:///C:/Users/Usuario/Desktop/DSV-GIT/Primeira%20vez/Projetos/testes%20e%20ideias.html";
             } else {
-                window.alert("Logou não");
+                window.alert("Login inválido");
             }
-        };
-
-
-
-
-
-
-
-
+        }
     </script>
-</body>
 
+</body>
 </html>
