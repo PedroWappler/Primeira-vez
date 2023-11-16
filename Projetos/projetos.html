@@ -1,55 +1,47 @@
 <!DOCTYPE html>
 <html>
-
-<head></head>
-
+<head>
+</head>
 <body>
     <div>
+        <h2>Insira seu Usuario:</h2>
+        <input type="text" id="userInput">
 
-        <h2>Relatório:</h2>
-        <button onclick="exibirDados()">Ver relatório</button>
-        </br>
-        </br>
+        <h2>Insira sua senha:</h2>
+        <input type="password" id="senhaInput">
+
+        <button onclick="validarLogin()">Login</button>
     </div>
 
-
-
     <script>
-     for (let  = 0;  < array.length; ++) {
-            const element = array[];
-            
-        }
+        function validarLogin() { 
+            let usuarioFixo = "Alex"
+            let senhaFixa = "123"
+
+            let usuarioFixo2 = "Pedro"
+            let senhaFixa2 = "456"
+
+            let usuarioFixo3 = "Anônimo" 
+            let senhaFixa3 = "789"
+
+            let usuario = document.getElementById("userInput").value;
+            let senha = document.getElementById("senhaInput").value;
+
+            if ((usuario == usuarioFixo ,2,3) && (senha == senhaFixa ,2,3)) {
+                window.location.href = "file:///C:/Users/Usuario/Desktop/DSV-GIT/Primeira%20vez/Projetos/testes%20e%20ideias.html";
+            } else {
+                window.alert("Logou não");
+            }
+        };
+
+
+
+
+
+
+
 
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
-
-
 
 </html>

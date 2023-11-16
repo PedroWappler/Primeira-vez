@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lista de Tarefas</h1>
+
+    <form id="taskForm">
+        <label for="task">Adicionar Tarefa:</label>
+        <input type="text" id="task" required>
+        <button type="button" onclick="addTask()">Adicionar</button>
+    </form>
+
+    <ul id="taskList"></ul>
+
+    <button type="button" onclick="generateReport()">Gerar Relatório</button>
+
+    <script>
+        function addTask() {
+            var taskInput = document.getElementById('task');
+            var taskText = taskInput.value;
+
+            if (taskText.trim() !== '') {
+                var taskList = document.getElementById('taskList');
+                var li = document.createElement('li');
+                li.innerHTML = taskText + ' <button type="button" onclick="deleteTask(this)">Excluir</button>';
+                taskList.appendChild(li);
+                taskInput.value = '';
+            }
+        }
+
+        function deleteTask(button) {
+            var li = button.parentNode;
+            li.parentNode.removeChild(li);
+        }
+
+        function generateReport() {
+            var taskList = document.getElementById('taskList');
+            var tasks = taskList.getElementsByTagName('li');
+
+            if (tasks.length === 0) {
+                alert('Adicione tarefas antes de gerar o relatório.');
+                return;
+            }
+
+            var report = 'Relatório de Tarefas:\n';
+
+            for (var i = 0; i < tasks.length; i++) {
+                report += (i + 1) + '. ' + tasks[i].innerText.replace('Excluir', '') + '\n';
+            }
+
+            alert(report);
+        }
+    </script>
+
+</body>
+</html>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
