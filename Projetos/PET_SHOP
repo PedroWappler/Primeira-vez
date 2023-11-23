@@ -1,10 +1,10 @@
 PET_SHOP
 
 
-    Nome : o nome do animal de estimação
-    Espécie :  (cachorro, gato, pássaro, etc.)
-    Idade 
-    Dono
+Nome (string): o nome do animal de estimação
+    Espécie (string): a espécie do animal (cachorro, gato, pássaro, etc.)
+    Idade (inteiro): a idade do animal em anos
+    Dono (string): o nome do dono do animal
     Métodos:
     
     getNome(): retorna o nome do animal
@@ -12,36 +12,35 @@ PET_SHOP
     getIdade(): retorna a idade do animal
     getDono(): retorna o nome do dono do animal
     setDono(novoDono: string): atualiza o nome do dono do animal
-
     Classe: Cliente Atributos:
     
-    Nome: o nome do cliente
-    Telefone: o número de telefone do cliente
+    Nome (string): o nome do cliente
+    Telefone (string): o número de telefone do cliente
     Métodos:
     
-    Nome: retorna o nome do cliente
-    Telefone(): retorna o número de telefone do cliente
-    Classe(): Serviço Atributos:
+    getNome(): retorna o nome do cliente
+    getTelefone(): retorna o número de telefone do cliente
+    Classe: Serviço Atributos:
     
-    Descrição: uma descrição do serviço que foi realizado
-    Preço 
+    Descrição (string): uma descrição do serviço a ser realizado
+    Preço (float): o preço do serviço
     Métodos:
     
     getDescrição(): retorna a descrição do serviço
     getPreço(): retorna o preço do serviço
     Classe: Petshop Atributos:
     
-    Clientes: uma lista de clientes cadastrados
-    Pets: uma lista de animais de estimação cadastrados
-    Serviços: uma lista de serviços oferecidos
+    Clientes (lista de objetos Cliente): uma lista de clientes cadastrados
+    Pets (lista de objetos Pet): uma lista de animais de estimação cadastrados
+    Serviços (lista de objetos Serviço): uma lista de serviços oferecidos
     Métodos:
     
-    adicionarCliente
-    removerCliente
-    buscarCliente: retorna o objeto Cliente correspondente ao nome fornecido
-    adicionarPet
-    removerPet
-    buscarPet: retorna o objeto Pet correspondente ao nome fornecido
-    adicionarServiço
-    removerServiço
-    listarServiços
+    adicionarCliente(cliente: objeto Cliente): adiciona um novo cliente à lista de clientes
+    removerCliente(cliente: objeto Cliente): remove um cliente da lista de clientes
+    buscarCliente(nome: string): retorna o objeto Cliente correspondente ao nome fornecido
+    adicionarPet(pet: objeto Pet): adiciona um novo animal de estimação à lista de pets
+    removerPet(pet: objeto Pet): remove um animal de estimação da lista de pets
+    buscarPet(nome: string): retorna o objeto Pet correspondente ao nome fornecido
+    adicionarServiço(serviço: objeto Serviço): adiciona um novo serviço à lista de serviços
+    removerServiço(serviço: objeto Serviço): remove um serviço da lista de serviços
+    listarServiços(): retorna a lista de serviços oferecidos pelo petshop
