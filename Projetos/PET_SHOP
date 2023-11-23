@@ -7,9 +7,9 @@ PET_SHOP
     Dono
     Métodos:
     
-    setNome(): retorna o nome do animal
-    setEspécie(): retorna a espécie do animal
-    setIdade(): retorna a idade do animal
+    getNome(): retorna o nome do animal
+    getEspécie(): retorna a espécie do animal
+    getIdade(): retorna a idade do animal
     setDono(): retorna o nome do dono do animal
     setDono(novoDono: string): atualiza o nome do dono do animal
 
