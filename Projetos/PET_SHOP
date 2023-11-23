@@ -10,7 +10,7 @@ PET_SHOP
     getNome(): retorna o nome do animal
     getEspécie(): retorna a espécie do animal
     getIdade(): retorna a idade do animal
-    setDono(): retorna o nome do dono do animal
+    getDono(): retorna o nome do dono do animal
     setDono(novoDono: string): atualiza o nome do dono do animal
 
     Classe: Cliente Atributos:
@@ -19,7 +19,7 @@ PET_SHOP
     Telefone: o número de telefone do cliente
     Métodos:
     
-    Nome(): retorna o nome do cliente
+    Nome: retorna o nome do cliente
     Telefone(): retorna o número de telefone do cliente
     Classe(): Serviço Atributos:
     
