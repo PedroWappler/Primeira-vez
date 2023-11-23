@@ -11,7 +11,7 @@ PET_SHOP
     getEspécie(): retorna a espécie do animal
     getIdade(): retorna a idade do animal
     getDono(): retorna o nome do dono do animal
-    setDono(): atualiza o nome do dono do animal
+    setDono(novoDono: string): atualiza o nome do dono do animal
 
     Classe: Cliente Atributos:
     
