@@ -1,0 +1,47 @@
+PET_SHOP
+
+
+    Nome : o nome do animal de estimação
+    Espécie :  (cachorro, gato, pássaro, etc.)
+    Idade 
+    Dono
+    Métodos:
+    
+    getNome(): retorna o nome do animal
+    getEspécie(): retorna a espécie do animal
+    getIdade(): retorna a idade do animal
+    getDono(): retorna o nome do dono do animal
+    setDono(novoDono: string): atualiza o nome do dono do animal
+
+    Classe: Cliente Atributos:
+    
+    Nome: o nome do cliente
+    Telefone: o número de telefone do cliente
+    Métodos:
+    
+    Nome(): retorna o nome do cliente
+    Telefone(): retorna o número de telefone do cliente
+    Classe(): Serviço Atributos:
+    
+    Descrição: uma descrição do serviço que foi realizado
+    Preço 
+    Métodos:
+    
+    getDescrição(): retorna a descrição do serviço
+    getPreço(): retorna o preço do serviço
+    Classe: Petshop Atributos:
+    
+    Clientes: uma lista de clientes cadastrados
+    Pets: uma lista de animais de estimação cadastrados
+    Serviços: uma lista de serviços oferecidos
+    Métodos:
+    
+    adicionarCliente
+    removerCliente
+    buscarCliente: retorna o objeto Cliente correspondente ao nome fornecido
+    adicionarPet
+    removerPet
+    buscarPet: retorna o objeto Pet correspondente ao nome fornecido
+    adicionarServiço
+    removerServiço
+    listarServiços
